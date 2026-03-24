@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>北华大学猫猫导航</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              50: '#fffbeb',
+              200: '#fcd34d',
+              900: '#78350f',
+            },
+            rose: {50: '#fff1f2',500:'#f43f5e'}
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+    *{
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+    body {
+      overflow-y: auto;
+    }
+    .card-hover{
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover{
+      transform: translateY(-4px);
+    }
+    .animate-delay{
+      animation: fadeIn 0.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity:0; transform: translateY(16px); }
+      to { opacity:1; transform: translateY(0); }
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+  </style>
+</head>
+<body class="min-h-screen bg-[radial-gradient(circle_at_top,_#fff8e8_0%,_#f7efe3_35%,_#f3efe8_100%)] text-stone-800">
+  <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:54px_54px] opacity-30"></div>
+
+  <main class="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <!-- 顶部大卡片 -->
+    <section class="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/65 p-6 shadow-[0_20px_80px_rgba(120,84,35,0.12)] backdrop-blur-xl sm:p-8 lg:p-10">
+      <div class="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-amber-200/50 blur-3xl"></div>
+      <div class="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-orange-100/70 blur-3xl"></div>
+
+      <div class="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-medium text-amber-900 shadow-sm animate-delay delay-1">
+            <i class="fa fa-star"></i>
+            北华大学 · 猫猫网站导航
+          </div>
+
+          <h1 class="mt-5 text-4xl font-black tracking-tight text-stone-900 sm:text-5xl lg:text-6xl animate-delay delay-2">
+            把校园里每一只
+            <span class="mx-3 inline-block rotate-[-4deg] rounded-2xl bg-stone-900 px-4 py-1 text-white shadow-lg">小猫</span>
+            都收进导航里
+          </h1>
+
+          <p class="mt-5 max-w-2xl text-base leading-8 text-stone-600 sm:text-lg animate-delay delay-3">
+            这是一个适合北华大学的猫咪主题导航首页。你可以在这里快速找到猫猫档案、喂食指南、猫点地图、相册和校园公告，让喜欢猫的人更容易参与和记录校园里的温柔瞬间。
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center animate-delay delay-4">
+            <div class="relative w-full max-w-xl">
+              <i class="fa fa-search absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-400"></i>
+              <input type="text" placeholder="搜索：猫名、功能、标签……" class="h-12 rounded-2xl border-stone-200 bg-white/85 pl-11 shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-amber-300 w-full">
+            </div>
+            <button class="h-12 rounded-2xl bg-stone-900 px-5 text-white shadow-lg shadow-stone-900/20 hover:bg-stone-800">
+              <i class="fa fa-paw mr-2"></i>
+              开始逛猫站
+            </button>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 animate-delay delay-5">
+            <div class="rounded-2xl border-white/60 bg-white/75 shadow-sm backdrop-blur-sm p-4">
+              <div class="text-2xl font-black text-stone-900">12</div>
+              <div class="mt-1 text-sm text-stone-500">今日关注</div>
+            </div>
+            <div class="rounded-2xl border-white/60 bg-white/75 shadow-sm backdrop-blur-sm p-4">
+              <div class="text-2xl font-black text-stone-900">28</div>
+              <div class="mt-1 text-sm text-stone-500">校园猫猫</div>
+            </div>
+            <div class="rounded-2xl border-white/60 bg-white/75 shadow-sm backdrop-blur-sm p-4">
+              <div class="text-2xl font-black text-stone-900">9</div>
+              <div class="mt-1 text-sm text-stone-500">猫点数量</div>
+            </div>
+            <div class="rounded-2xl border-white/60 bg-white/75 shadow-sm backdrop-blur-sm p-4">
+              <div class="text-2xl font-black text-stone-900">64</div>
+              <div class="mt-1 text-sm text-stone-500">爱心志愿者</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧推荐猫咪卡片 -->
+        <div class="relative animate-delay delay-4">
+          <div class="rounded-[2rem] border border-white/80 bg-gradient-to-br from-white/85 via-amber-50 to-orange-100 p-5 shadow-[0_18px_60px_rgba(120,84,35,0.15)]">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-sm font-semibold text-amber-900/80">今日推荐猫咪</div>
+                <div class="mt-1 text-2xl font-black text-stone-900">橘橘</div>
+              </div>
+              <div class="rounded-2xl bg-white/90 p-3 shadow-sm">
+                <i class="fa fa-heart text-rose-500"></i>
+              </div>
+            </div>
+
+            <div class="mt-5 overflow-hidden rounded-[1.75rem] border border-white/70 bg-[linear-gradient(135deg,#fce7c3_0%,#fff7ed_45%,#fde68a_100%)] p-5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-sm font-medium text-stone-700">常出没地点</div>
+                  <div class="mt-1 flex items-center gap-2 text-lg font-bold text-stone-900">
+                    <i class="fa fa-map-marker text-amber-700"></i>
+                    第一食堂后侧
+                  </div>
+                </div>
+                <div class="rounded-2xl bg-white/70 px-3 py-2 text-sm font-semibold text-stone-700 shadow-sm">活跃</div>
+              </div>
+
+              <div class="mt-5 rounded-3xl bg-white/75 p-4 shadow-sm backdrop-blur-sm">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-stone-900 text-2xl text-white shadow-md">
+                    <i class="fa fa-cat"></i>
+                  </div>
+                  <div>
+                    <div class="font-bold text-stone-900">今日状态</div>
+                    <div class="mt-1 text-sm leading-6 text-stone-600">
+                      胖乎乎，爱蹭人，看到脚步声就会先抬头观察，再决定要不要靠近。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
+              <div class="rounded-2xl bg-white/75 p-3 shadow-sm">
+                <div class="text-stone-500">亲近度</div>
+                <div class="mt-1 font-bold text-stone-900">高</div>
+              </div>
+              <div class="rounded-2xl bg-white/75 p-3 shadow-sm">
+                <div class="text-stone-500">饭点</div>
+                <div class="mt-1 font-bold text-stone-900">12:00</div>
+              </div>
+              <div class="rounded-2xl bg-white/75 p-3 shadow-sm">
+                <div class="text-stone-500">出没率</div>
+                <div class="mt-1 font-bold text-stone-900">88%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 导航功能卡片 -->
+    <section class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-cat"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">Profile</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">猫猫档案</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">查看北华校园里每只小猫的名字、性格和出没地点。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-cutlery"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">Guide</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">喂食指南</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">了解投喂时间、食物建议与校园爱猫公约。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">Map</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">猫点地图</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">快速定位宿舍区、食堂边、林荫路等常见猫咪据点。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-camera"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">Gallery</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">猫图相册</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">收集校园猫猫的高清照片、表情包和温暖瞬间。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-bell"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">News</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">校园公告</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">发布救助信息、绝育提醒、寻猫启事与活动通知。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover block">
+        <div class="h-full overflow-hidden rounded-[1.75rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="rounded-2xl bg-stone-900 p-3 text-white shadow-lg shadow-stone-900/20">
+                <i class="fa fa-comment"></i>
+              </div>
+              <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">Community</span>
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-stone-900">猫友社区</h3>
+            <p class="mt-2 min-h-14 text-sm leading-7 text-stone-600">和同学们分享投喂经验、拍照技巧和日常见闻。</p>
+            <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-stone-900">
+              进入页面
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部双卡片 -->
+    <section class="mt-8 grid gap-5 lg:grid-cols-[1fr_1fr]">
+      <div class="rounded-[2rem] border-white/70 bg-white/75 shadow-[0_12px_40px_rgba(120,84,35,0.08)] backdrop-blur-md">
+        <div class="p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <div class="rounded-2xl bg-emerald-500 p-3 text-white shadow-lg shadow-emerald-500/20">
+              <i class="fa fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-black text-stone-900">北华大学爱猫公约</h2>
+              <p class="mt-1 text-sm text-stone-500">让校园与猫猫都更舒适。</p>
+            </div>
+          </div>
+
+          <div class="mt-5 space-y-4">
+            <div class="flex gap-3 rounded-2xl bg-stone-50 p-4">
+              <div class="mt-1 h-2.5 w-2.5 rounded-full bg-amber-500"></div>
+              <p class="text-sm leading-7 text-stone-700">投喂前先确认猫咪状态，不打扰休息与进食。</p>
+            </div>
+            <div class="flex gap-3 rounded-2xl bg-stone-50 p-4">
+              <div class="mt-1 h-2.5 w-2.5 rounded-full bg-amber-500"></div>
+              <p class="text-sm leading-7 text-stone-700">选择合适食物，保持环境整洁，不留下包装垃圾。</p>
+            </div>
+            <div class="flex gap-3 rounded-2xl bg-stone-50 p-4">
+              <div class="mt-1 h-2.5 w-2.5 rounded-full bg-amber-500"></div>
+              <p class="text-sm leading-7 text-stone-700">拍照可以可爱，但请不要追逐、围堵或强行抱猫。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] border-white/70 bg-gradient-to-br from-stone-900 to-stone-800 text-white shadow-[0_12px_40px_rgba(120,84,35,0.14)]">
+        <div class="p-6 sm:p-7">
+          <div class="flex items-center gap-3">
+            <div class="rounded-2xl bg-white/10 p-3">
+              <i class="fa fa-moon-o"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-black">夜间模式也好看</h2>
+              <p class="mt-1 text-sm text-stone-300">这块区域适合放公告、更新日志或活动报名入口。</p>
+            </div>
+          </div>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">小白</div>
+                <i class="fa fa-paw text-amber-300"></i>
+              </div>
+              <div class="mt-3 text-sm text-stone-300">图书馆南门</div>
+              <div class="mt-2 text-sm leading-6 text-stone-400">安静、慢热、喜欢晒太阳</div>
+            </div>
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">黑豆</div>
+                <i class="fa fa-paw text-amber-300"></i>
+              </div>
+              <div class="mt-3 text-sm text-stone-300">林荫路长椅</div>
+              <div class="mt-2 text-sm leading-6 text-stone-400">机敏、警觉、爱巡逻</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="mt-8 flex flex-col items-center justify-between gap-3 rounded-[2rem] border border-white/70 bg-white/65 px-6 py-5 text-center text-sm text-stone-500 shadow-sm backdrop-blur-md sm:flex-row sm:text-left">
+      <div>北华大学猫猫导航站 · 温柔、实用、适合做主页</div>
+      <div>可继续替换为真实链接、校内栏目和猫咪资料库</div>
+    </footer>
+  </main>
+</body>
+</html>
